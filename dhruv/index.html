@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title> Hospital Data </title>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+		<script src='underscore.js'></script>
+		<script src='main.js'></script>
+	</head>
+	<body ng-app="displayTimings">
+  		<div ng-controller="displayTimingController">
+  		<form name="myForm">
+    			<label for=""> Select Hospital: </label>
+    			<select name="selectHospital" id="selectHospital" ng-model="data.repeatSelect">
+      				<option ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.business.name}}</option>
+    			</select><br><br>
+		<input type="submit" ng-click="update(data.repeatSelect)" value="Know Timings!" />	
+  		</form>
+  		<hr>
+  		<tt>timing = {{timing}}</tt><br/>
+		</div>
+	</body>
+		
+
+</html>
